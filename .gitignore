@@ -1,0 +1,10 @@
+# Hugo generated files
+public/
+resources/
+
+# OS junk
+.DS_Store
+
+# Editor settings
+.vscode/
+.idea/

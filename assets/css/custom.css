@@ -1,0 +1,79 @@
+/*/* Remove underline from Title on hover
+.hover\:underline:hover,
+a:hover .hover\:underline {
+  text-decoration: none !important;
+}
+
+/* Accent color the Title on hover
+main a:hover h1,
+main a:hover h2,
+main a:hover h3,
+main a:hover h4 {
+  color: rgb(191, 255, 0) !important;
+}
+
+/* Accent color outline the Card on hover
+.card:hover,
+article:hover,
+main .rounded-xl:hover,
+main .rounded-2xl:hover {
+  outline: 2px solid rgb(191, 255, 0);
+}
+*/
+
+/* Change the width of the logo on the menu */
+.max-w-\[5rem\] {
+    max-width: 2.25rem;
+}
+
+/* Disable Blowfish "glass" blur layer behind the menu */
+#menu-blur {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+  box-shadow: none !important;     /* removes shadow-2xl effect */
+  opacity: 1 !important;          /* keep it stable */
+  background: rgb(var(--color-neutral-900)) !important; /* your menu bar color */
+}
+
+@layer utilities {
+  .article-content.max-w-prose {
+    max-width: none !important;
+  }
+}
+
+/* --- Card styling ONLY (exclude the main single-page article) --- */
+
+/* Base: default shadow on cards */
+.card,
+main article.rounded-lg.border,
+main article.rounded-xl.border,
+main article.rounded-2xl.border {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+  transition:
+    box-shadow 0.15s ease,
+    outline-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+/* Hover: lime outline + stronger shadow */
+.card:hover,
+main article.rounded-lg.border:hover,
+main article.rounded-xl.border:hover,
+main article.rounded-2xl.border:hover {
+  outline: 1px solid rgb(191, 255, 0);
+  outline-offset: 2px;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+/* Explicitly neutralize the main content article (safety net) */
+#main-content > article {
+  outline: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}

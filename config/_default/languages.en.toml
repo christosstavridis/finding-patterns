@@ -1,0 +1,23 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Finding Patterns"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = "img/logo-circle-512.png"
+  description = "Description: Thoughts, experiments, and things I’m learning."
+
+[params.author]
+  name = "Christos Stavridis"
+  email = "myemail@icloud.com"
+  image = "img/logo-circle-512.png"
+  headline = "Headline: Thoughts, experiments, and things I’m learning."
+  bio = "Bio: Thoughts, experiments, and things I’m learning."
+  links = [
+    { linkedin = "http://linkedin.com/in/stavridisc" },
+    { github = "https://github.com/christosstavridis" },
+  ]
